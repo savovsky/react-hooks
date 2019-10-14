@@ -4,15 +4,17 @@ import UseStateHook2 from './components/UseStateHook2';
 import UseStateHook3 from './components/UseStateHook3';
 import UseStateHook4 from './components/UseStateHook4';
 import UseStateHook5 from './components/UseStateHook5';
+import UseEffectHook1 from './components/UseEffectHook1';
 
 const App = () => {
   return (
     <>
       <UseStateHook1 />
-      <UseStateHook2 count={5}/>
+      <UseStateHook2 count={5} />
       <UseStateHook3 />
-      <UseStateHook4 count={5}/>
+      <UseStateHook4 count={5} />
       <UseStateHook5 />
+      <UseEffectHook1 count={0} />
     </>
   );
 }
