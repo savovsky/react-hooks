@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-// Complex State with useState
-// State is an 'array' (collection of anything).
-const UseStateHook5 = () => {
-  const [notes, setNotes] = useState([]);
+// Synchronize notes data with localStorage
+const UseEffectHook2 = () => {
+  const notesData = JSON.parse(localStorage.getItem('notes'))
+  const [notes, setNotes] = useState(notesData || []);
   const [title, setTilte] = useState('');
 
   const addNote = (e) => {
     e.preventDefault();
     setNotes([
       ...notes,
-      { title } // title: title
+      { title }
     ]);
     setTilte('');
   };
@@ -19,9 +19,13 @@ const UseStateHook5 = () => {
     setNotes(notes.filter((note) => note.title !== title));
   };
 
+  useEffect(() => {
+    localStorage.setItem('notes', JSON.stringify(notes));
+  });
+
   return (
     <>
-      <strong>UseStateHook5</strong>
+      <strong>UseEffectHook2</strong>
       <div>Notes:</div>
       {notes.map((note) => (
           <div key={note.title}>
@@ -38,4 +42,4 @@ const UseStateHook5 = () => {
   );
 }
 
-export default UseStateHook5;
+export default UseEffectHook2;
