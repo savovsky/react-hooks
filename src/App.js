@@ -7,7 +7,8 @@ import React from 'react';
 // import UseEffectHook1 from './components/UseEffectHook1';
 // import UseEffectHook2 from './components/UseEffectHook2';
 // import UseEffectHook3 from './components/UseEffectHook3';
-import UseEffectHook4 from './components/UseEffectHook4';
+// import UseEffectHook4 from './components/UseEffectHook4';
+import UseEffectHook5 from './components/UseEffectHook5';
 
 const App = () => {
   return (
@@ -20,7 +21,8 @@ const App = () => {
       {/* <UseEffectHook1 count={0} /> */}
       {/* <UseEffectHook2 /> */}
       {/* <UseEffectHook3 count={0} /> */}
-      <UseEffectHook4 count={0} />
+      {/* <UseEffectHook4 count={0} /> */}
+      <UseEffectHook5 />
     </>
   );
 }
