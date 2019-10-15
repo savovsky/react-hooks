@@ -43,20 +43,20 @@ const Note = ({ note, removeNote }) => {
 
   // useEffect is invoked on every props change
   useEffect(() => {
-    console.log('useEffectOne invoked!');
+    console.log('%c useEffectOne invoked!', 'color: orange');
   });
 
   // useEffect is invoked only once
   useEffect(() => {
-    console.log('useEffectTwo invoked!');
+    console.log('%c useEffectTwo invoked!', 'color: blue');
   }, []);
 
   // useEffect is invoked only once
   useEffect(() => {
-    console.log('useEffectThree invoked!');
+    console.log('%c useEffectThree invoked!', 'color: purple');
 
     return () => {
-      console.log('Cleaning up useEffectThree');
+      console.log('%c Cleaning up useEffectThree', 'color: green');
     }
 
   }, []);

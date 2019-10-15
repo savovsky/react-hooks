@@ -7,15 +7,15 @@ const UseEffectHook4 = (props) => {
   const [text, setText] = useState('');
 
   useEffect(() => {
-    console.log('useEffectOne run once');
+    console.log('%c useEffectOne run once', 'color: orange');
   }, []);
 
   useEffect(() => {
-    console.log('useEffectTwo invoked');
+    console.log('%c useEffectTwo invoked', 'color: blue');
   }, [count]);
 
   useEffect(() => {
-    console.log('useEffectThree invoked');
+    console.log('%c useEffectThree invoked', 'color: purple');
   });
 
   return (

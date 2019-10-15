@@ -6,7 +6,7 @@ const UseEffectHook3 = (props) => {
   const [text, setText] = useState('');
 
   useEffect(() => {
-    console.log('useEffect invoked');
+    console.log('%c useEffect invoked', 'color: blue');
     document.title = count
   }, [count]);
 
