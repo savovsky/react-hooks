@@ -1,14 +1,14 @@
 import React from 'react';
-// import UseStateHook1 from './components/UseStateHook1';
-// import UseStateHook2 from './components/UseStateHook2';
-// import UseStateHook3 from './components/UseStateHook3';
-// import UseStateHook4 from './components/UseStateHook4';
-// import UseStateHook5 from './components/UseStateHook5';
-// import UseEffectHook1 from './components/UseEffectHook1';
-// import UseEffectHook2 from './components/UseEffectHook2';
-// import UseEffectHook3 from './components/UseEffectHook3';
-// import UseEffectHook4 from './components/UseEffectHook4';
-import UseEffectHook5 from './components/UseEffectHook5';
+// import UseStateHook1 from './components/useState/UseStateHook1';
+// import UseStateHook2 from './components/useState/UseStateHook2';
+// import UseStateHook3 from './components/useState/UseStateHook3';
+// import UseStateHook4 from './components/useState/UseStateHook4';
+// import UseStateHook5 from './components/useState/UseStateHook5';
+// import UseEffectHook1 from './components/useEffect/UseEffectHook1';
+// import UseEffectHook2 from './components/useEffect/UseEffectHook2';
+// import UseEffectHook3 from './components/useEffect/UseEffectHook3';
+// import UseEffectHook4 from './components/useEffect/UseEffectHook4';
+import UseEffectHook5 from './components/useEffect/UseEffectHook5';
 
 const App = () => {
   return (
