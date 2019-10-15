@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
 // Complex State with useState
-const UseStateHook5 = (props) => {
+// State is an 'array' (collection of anything).
+const UseStateHook5 = () => {
   const [notes, setNotes] = useState([]);
   const [title, setTilte] = useState('');
 
