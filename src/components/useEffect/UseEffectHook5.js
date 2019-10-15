@@ -51,7 +51,7 @@ const Note = ({ note, removeNote }) => {
     console.log('%c useEffectTwo invoked!', 'color: blue');
   }, []);
 
-  // useEffect is invoked only once
+  // useEffect is invoked only once and returned function is called just before Unmount
   useEffect(() => {
     console.log('%c useEffectThree invoked!', 'color: purple');
 
@@ -70,6 +70,23 @@ const Note = ({ note, removeNote }) => {
 }
 
 export default UseEffectHook5;
+
+// Example - cleanUp function
+// const useMe = (() => {
+//   console.log('%c useMe invoked!', 'color: purple');
+
+//   return () => {
+//     console.log('%c Cleaning up', 'color: green');
+//   };
+// });
+
+// const cleanUp = useMe();
+
+// if (typeof(cleanUp) === typeof(Function)) {
+//   cleanUp();
+// }
+
+
 
 // Presentation slide
 // import React, { useState, useEffect } from 'react';
@@ -92,4 +109,3 @@ export default UseEffectHook5;
 //     </div>
 //   );
 // };
-
