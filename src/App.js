@@ -6,11 +6,11 @@ import React from 'react';
 // import UseStateHook5 from './components/useState/UseStateHook5';
 // import UseEffectHook1 from './components/useEffect/UseEffectHook1';
 // import UseEffectHook2 from './components/useEffect/UseEffectHook2';
-// import UseEffectHook3 from './components/useEffect/UseEffectHook3';
+import UseEffectHook3 from './components/useEffect/UseEffectHook3';
 // import UseEffectHook4 from './components/useEffect/UseEffectHook4';
 // import UseEffectHook5 from './components/useEffect/UseEffectHook5';
 // import CustomHook1 from './components/customHooks/CustomHook1';
-import CustomHook2 from './components/customHooks/CustomHook2';
+// import CustomHook2 from './components/customHooks/CustomHook2';
 
 const App = () => {
   return (
@@ -22,11 +22,11 @@ const App = () => {
       {/* <UseStateHook5 /> */}
       {/* <UseEffectHook1 count={0} /> */}
       {/* <UseEffectHook2 /> */}
-      {/* <UseEffectHook3 count={0} /> */}
+      <UseEffectHook3 count={0} />
       {/* <UseEffectHook4 count={0} /> */}
       {/* <UseEffectHook5 /> */}
       {/* <CustomHook1 /> */}
-      <CustomHook2 />
+      {/* <CustomHook2 /> */}
     </>
   );
 }

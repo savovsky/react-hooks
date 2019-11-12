@@ -85,27 +85,3 @@ export default UseEffectHook5;
 // if (typeof(cleanUp) === typeof(Function)) {
 //   cleanUp();
 // }
-
-
-
-// Presentation slide
-// import React, { useState, useEffect } from 'react';
-
-// const Example = (props) => {
-
-//   // useEffect is invoked only once on component init.
-//   useEffect(() => {
-//     console.log('useEffect invoked!');
-
-//     return () => {
-//       console.log('Cleaning up useEffect');
-//       // Do some work...
-//     }
-//   }, []);
-
-//   return (
-//     <div>
-//       {props.title}
-//     </div>
-//   );
-// };

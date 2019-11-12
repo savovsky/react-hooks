@@ -5,8 +5,11 @@ const UseEffectHook1 = (props) => {
   const [count, setCount] = useState(props.count);
   const [text, setText] = useState('');
 
+  // runs on component init after rendering
+  // runs after each update (state or props change)
+  // runs once for component Lifecycle
   useEffect(() => {
-    console.log('%c useEffect invoked', 'color: blue');
+    console.log('%cuseEffect invoked', 'color: white; background: blue; padding: 5px');
     document.title = count
   });
 

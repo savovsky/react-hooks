@@ -32,28 +32,3 @@ const UseEffectHook4 = (props) => {
 }
 
 export default UseEffectHook4;
-
-
-// Presentation slide
-// import React, { useState, useEffect } from 'react';
-
-// const Example = () => {
-//   const [count, setCount] = useState(0);
-//   const [text, setText] = useState('');
-
-//   useEffect(() => {
-//     // Run only once on component init and Do some work...
-//   }, []);
-
-//   useEffect(() => {
-//     // Do some work... only if 'count' is changed
-//   }, [count]);
-
-//   return (
-//     <>
-//       <div>{text || 'Count'}: {count}</div>
-//       <button onClick={() => setCount(count + 1)}>+1</button>
-//       <input value={text} onChange={(e) => setText(e.target.value)}/>
-//     </>
-//   );
-// }
