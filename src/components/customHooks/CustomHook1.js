@@ -15,7 +15,7 @@ const useMousePosition = () => {
 }
 
 // WARNIG - every state change in the custom Hook useMousePosition,
-// will trigger new render of MousePosition Component and
+// will trigger new render of CustomHook1 Component and
 // each render will call useMousePosition() and 
 // each custom Hook useMousePosition call will add a new EventListener...
 // your browser is going to crash...
