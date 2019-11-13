@@ -30,10 +30,9 @@ const UseStateHook5 = () => {
           </div>
       ))}
       <form onSubmit={addNote}>
-        <input value={title} onChange={(e) => setTilte(e.target.value)}/>
+        <input value={title} onChange={(e) => setTilte(e.target.value)} />
         <button>add Note</button>
       </form>
-      <hr></hr>
     </>
   );
 }

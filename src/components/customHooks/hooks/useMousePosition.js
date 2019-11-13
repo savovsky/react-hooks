@@ -5,18 +5,17 @@ const useMousePosition = () => {
 
   useEffect(() => {
     const handleMouseMove = (e) => {
-      
       setPosition({
         x: e.pageX,
         y: e.pageY
       })
     };
     
-    console.log('Add EventListener');
+    console.log('%c(useMousePosition) Add EventListener', 'color: blue');
     document.addEventListener('mousemove', handleMouseMove);
 
     return () => {
-      console.log('Remove EventListener');
+      console.log('%c(useMousePosition) Remove EventListener', 'color: green');
       document.removeEventListener('mousemove', handleMouseMove);
     }
   }, []);

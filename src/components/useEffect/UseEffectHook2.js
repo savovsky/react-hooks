@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 // Synchronize notes data with localStorage
 const UseEffectHook2 = () => {
-  const notesData = JSON.parse(localStorage.getItem('notes'))
+  const notesData = JSON.parse(localStorage.getItem('notes'));
   const [notes, setNotes] = useState(notesData || []);
   const [title, setTilte] = useState('');
 
@@ -20,6 +20,7 @@ const UseEffectHook2 = () => {
   };
 
   useEffect(() => {
+    console.log('%cuseEffect invoked', 'color: blue');
     localStorage.setItem('notes', JSON.stringify(notes));
   });
 
@@ -34,10 +35,9 @@ const UseEffectHook2 = () => {
           </div>
       ))}
       <form onSubmit={addNote}>
-        <input value={title} onChange={(e) => setTilte(e.target.value)}/>
+        <input value={title} onChange={(e) => setTilte(e.target.value)} />
         <button>add Note</button>
       </form>
-      <hr></hr>
     </>
   );
 }

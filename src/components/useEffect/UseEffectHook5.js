@@ -20,6 +20,7 @@ const UseEffectHook5 = () => {
   };
 
   useEffect(() => {
+    console.log('%c useEffect invoked!', 'color: salmon');
     localStorage.setItem('notes', JSON.stringify(notes));
   }, [notes]);
 
@@ -32,7 +33,6 @@ const UseEffectHook5 = () => {
         <input value={title} onChange={(e) => setTilte(e.target.value)}/>
         <button>add Note</button>
       </form>
-      <hr></hr>
     </>
   );
 }
@@ -70,6 +70,7 @@ const Note = ({ note, removeNote }) => {
 }
 
 export default UseEffectHook5;
+
 
 // Example - cleanUp function
 // const useMe = (() => {

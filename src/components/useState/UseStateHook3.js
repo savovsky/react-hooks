@@ -12,8 +12,7 @@ const UseStateHook3 = () => {
       <button onClick={() => setCount(count + 1)}>+1</button>
       <button onClick={() => setCount(0)}>reset</button>
       <button onClick={() => setCount(count - 1)}>-1</button>
-      <input value={text} onChange={(e) => setText(e.target.value)}/>
-      <hr></hr>
+      <input value={text} onChange={(e) => setText(e.target.value)} />
     </>
   );
 }

@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 const UseStateHook4 = (props) => {
   // const [count, setCount] = useState(0);
   // const [text, setText] = useState('Score');
-  const [state, setState] = useState({
+  const [state, setState] = useState({ // one state object
     count: props.count,
     text: ''
   });
@@ -20,8 +20,7 @@ const UseStateHook4 = (props) => {
       <input value={state.text} onChange={(e) => setState({
         // ...state, // on every 'setState' - will sove the problem but this is not the way!
         text: e.target.value
-        })}/>
-      <hr></hr>
+      })} />
     </>
   );
 }

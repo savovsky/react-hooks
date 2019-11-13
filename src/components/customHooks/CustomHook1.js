@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const useMousePosition = () => {
   const [position, setPosition] = useState({ x: 0, y: 0});
 
-  console.log('addEventListener');
+  console.log('%c(useMousePosition) Add EventListener', 'color: purple');
   document.addEventListener('mousemove', (e) => {
     setPosition({
       x: e.pageX,

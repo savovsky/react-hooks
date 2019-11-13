@@ -8,7 +8,8 @@ const Note = ({ note, removeNote }) => {
     <>
       <div style={{
           backgroundColor: `rgb(${position.x}, 150, ${position.y})`,
-          height: 50
+          height: 50,
+          margin: 10
       }}>
         {note.title}
         <button onClick={() => removeNote(note.title)}>delete</button>
