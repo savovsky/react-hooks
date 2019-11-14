@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
+import CursorCoordinates from './components/CursorCoordinates';
+import Note from './components/Note';
 
-// Complex State with useState
-// State is an 'array' (collection of anything).
-const UseStateHook5 = () => {
+const CustomHook2 = () => {
   const [notes, setNotes] = useState([]);
   const [title, setTilte] = useState('');
 
@@ -10,7 +10,7 @@ const UseStateHook5 = () => {
     e.preventDefault();
     setNotes([
       ...notes,
-      { title } // title: title
+      { title }
     ]);
     setTilte('');
   };
@@ -21,20 +21,16 @@ const UseStateHook5 = () => {
 
   return (
     <>
-      <strong>UseStateHook5</strong>
+      <strong>Cursor Coordinates: </strong>
+      <CursorCoordinates />
       <div>Notes:</div>
-      {notes.map((note) => (
-          <div key={note.title}>
-            {note.title}
-            <button onClick={() => removeNote(note.title)}>delete</button>
-          </div>
-      ))}
+      {notes.map((note) => <Note key={note.title} note={note} removeNote={removeNote} />)}
       <form onSubmit={addNote}>
-        <input value={title} onChange={(e) => setTilte(e.target.value)} />
+        <input value={title} onChange={(e) => setTilte(e.target.value)}/>
         <button>add Note</button>
       </form>
     </>
   );
 }
 
-export default UseStateHook5;
+export default CustomHook2;

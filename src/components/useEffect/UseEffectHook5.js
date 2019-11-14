@@ -20,6 +20,7 @@ const UseEffectHook5 = () => {
   };
 
   useEffect(() => {
+    console.log('%c useEffect invoked!', 'color: salmon');
     localStorage.setItem('notes', JSON.stringify(notes));
   }, [notes]);
 
@@ -32,7 +33,6 @@ const UseEffectHook5 = () => {
         <input value={title} onChange={(e) => setTilte(e.target.value)}/>
         <button>add Note</button>
       </form>
-      <hr></hr>
     </>
   );
 }
@@ -51,7 +51,7 @@ const Note = ({ note, removeNote }) => {
     console.log('%c useEffectTwo invoked!', 'color: blue');
   }, []);
 
-  // useEffect is invoked only once
+  // useEffect is invoked only once and returned function is called just before Unmount
   useEffect(() => {
     console.log('%c useEffectThree invoked!', 'color: purple');
 
@@ -71,25 +71,18 @@ const Note = ({ note, removeNote }) => {
 
 export default UseEffectHook5;
 
-// Presentation slide
-// import React, { useState, useEffect } from 'react';
 
-// const Example = (props) => {
+// Example - cleanUp function
+// const useMe = (() => {
+//   console.log('%c useMe invoked!', 'color: purple');
 
-//   // useEffect is invoked only once on component init.
-//   useEffect(() => {
-//     console.log('useEffect invoked!');
+//   return () => {
+//     console.log('%c Cleaning up', 'color: green');
+//   };
+// });
 
-//     return () => {
-//       console.log('Cleaning up useEffect');
-//       // Do some work...
-//     }
-//   }, []);
+// const cleanUp = useMe();
 
-//   return (
-//     <div>
-//       {props.title}
-//     </div>
-//   );
-// };
-
+// if (typeof(cleanUp) === typeof(Function)) {
+//   cleanUp();
+// }

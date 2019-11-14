@@ -1,22 +1,34 @@
 import React, { useState, useEffect } from 'react';
 
-// Can use 'useEffect' multiple times
-// Can invoke 'useEffect' function just once on component init.
+// You can use 'useEffect' multiple times.
+// You can invoke 'useEffect' function just once on component init.
 const UseEffectHook4 = (props) => {
   const [count, setCount] = useState(props.count);
   const [text, setText] = useState('');
 
+  console.log('%c Component', 'color: brown');
+
   useEffect(() => {
-    console.log('%c useEffectOne run once', 'color: orange');
+    console.log('%c useEffectOne invoked', 'color: purple');
+  });
+
+  useEffect(() => {
+    console.log('%c useEffectTwo run once , []', 'color: orange');
   }, []);
 
   useEffect(() => {
-    console.log('%c useEffectTwo invoked', 'color: blue');
+    console.log('%c useEffectThree invoked , [count]', 'color: blue');
   }, [count]);
 
   useEffect(() => {
-    console.log('%c useEffectThree invoked', 'color: purple');
-  });
+    console.log('%c useEffectFour invoked , [text]', 'color: green');
+  }, [text]);
+
+  useEffect(() => {
+    console.log('%c useEffectFour invoked , [count, text]', 'color: red');
+  }, [count, text]);
+
+ 
 
   return (
     <>
@@ -26,34 +38,8 @@ const UseEffectHook4 = (props) => {
       <button onClick={() => setCount(props.count)}>reset</button>
       <button onClick={() => setCount(count - 1)}>-1</button>
       <input value={text} onChange={(e) => setText(e.target.value)}/>
-      <hr></hr>
     </>
   );
 }
 
 export default UseEffectHook4;
-
-
-// Presentation slide
-// import React, { useState, useEffect } from 'react';
-
-// const Example = () => {
-//   const [count, setCount] = useState(0);
-//   const [text, setText] = useState('');
-
-//   useEffect(() => {
-//     // Run only once on component init and Do some work...
-//   }, []);
-
-//   useEffect(() => {
-//     // Do some work... only if 'count' is changed
-//   }, [count]);
-
-//   return (
-//     <>
-//       <div>{text || 'Count'}: {count}</div>
-//       <button onClick={() => setCount(count + 1)}>+1</button>
-//       <input value={text} onChange={(e) => setText(e.target.value)}/>
-//     </>
-//   );
-// }

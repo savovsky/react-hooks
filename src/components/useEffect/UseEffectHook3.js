@@ -7,8 +7,13 @@ const UseEffectHook3 = (props) => {
 
   useEffect(() => {
     console.log('%c useEffect invoked', 'color: blue');
-    document.title = count
-  }, [count]);
+    // document.title = count
+  }, [count]); 
+  // }, []);
+  // }, [text]);
+  // React expect to Be Honest About Dependencies
+  // If deps contain every value used by the effect, React knows when to re-run it.
+  // https://overreacted.io/a-complete-guide-to-useeffect/
 
   return (
     <>
@@ -17,31 +22,9 @@ const UseEffectHook3 = (props) => {
       <button onClick={() => setCount(count + 1)}>+1</button>
       <button onClick={() => setCount(props.count)}>reset</button>
       <button onClick={() => setCount(count - 1)}>-1</button>
-      <input value={text} onChange={(e) => setText(e.target.value)}/>
-      <hr></hr>
+      <input value={text} onChange={(e) => setText(e.target.value)} />
     </>
   );
 }
 
 export default UseEffectHook3;
-
-
-// Presentation slide
-// import React, { useState, useEffect } from 'react';
-
-// const Example = () => {
-//   const [count, setCount] = useState(0);
-//   const [text, setText] = useState('');
-
-//   useEffect(() => {
-//     // Do some work... only if 'count' is changed
-//   }, [count]);
-
-//   return (
-//     <>
-//       <div>{text || 'Count'}: {count}</div>
-//       <button onClick={() => setCount(count + 1)}>+1</button>
-//       <input value={text} onChange={(e) => setText(e.target.value)}/>
-//     </>
-//   );
-// }

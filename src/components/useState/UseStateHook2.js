@@ -10,14 +10,14 @@ const UseStateHook2 = (props) => {
       <div>Count: {count}</div>
       <button onClick={() => setCount(count + 1)}>+1</button>
       <button onClick={() => setCount(props.count)}>reset</button>
+      <button onClick={() => setCount(0)}>clear</button>
       <button onClick={() => setCount(count - 1)}>-1</button>
-      <hr></hr>
     </>
   );
 }
 
 UseStateHook2.defaultProps = {
-  count: 0
+  count: 7
 }
 
 export default UseStateHook2;
