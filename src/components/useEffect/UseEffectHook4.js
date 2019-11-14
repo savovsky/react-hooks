@@ -6,6 +6,8 @@ const UseEffectHook4 = (props) => {
   const [count, setCount] = useState(props.count);
   const [text, setText] = useState('');
 
+  console.log('%c Component', 'color: brown');
+
   useEffect(() => {
     console.log('%c useEffectOne invoked', 'color: purple');
   });
